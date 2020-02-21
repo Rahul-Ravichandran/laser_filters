@@ -39,6 +39,9 @@ target_link_libraries(scan_to_cloud_filter_chain ${catkin_LIBRARIES} ${Boost_LIB
 add_executable(scan_to_scan_filter_chain src/scan_to_scan_filter_chain.cpp)
 target_link_libraries(scan_to_scan_filter_chain ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 
+add_executable(scan_to_scan_filter_chain_back src/scan_to_scan_filter_chain_back.cpp)
+target_link_libraries(scan_to_scan_filter_chain_back ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+
 add_executable(generic_laser_filter_node src/generic_laser_filter_node.cpp)
 target_link_libraries(generic_laser_filter_node ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 
@@ -61,6 +64,7 @@ endif()
 install(TARGETS pointcloud_filters laser_scan_filters 
   scan_to_cloud_filter_chain
   scan_to_scan_filter_chain
+  scan_to_scan_filter_chain_back
   generic_laser_filter_node
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}

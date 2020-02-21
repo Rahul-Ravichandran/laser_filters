@@ -1,15 +1,6 @@
 scan_filter_chain:
-- name: mask
-  type: laser_filters/LaserScanMaskFilter
+- name: angle
+  type: laser_filters/LaserScanAngularBoundsFilter
   params:
-    masks:
-      laser:
-      - 100
-      - 101
-      - 102
-      - 103
-      - 104
-      - 1000
-      - 1001
-      - 1002
-      laser2: []
+    lower_angle: 0
+    upper_angle: 1.57
